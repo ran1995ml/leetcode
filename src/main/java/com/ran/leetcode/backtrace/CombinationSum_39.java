@@ -11,7 +11,7 @@ import java.util.List;
  */
 public class CombinationSum_39 {
     public static void main(String[] args) {
-        int[] candidates = {2,3,5};
+        int[] candidates = {2, 3, 5};
         int target = 8;
         CombinationSum_39 obj = new CombinationSum_39();
         System.out.println(obj.combinationSum(candidates, target).toString());
@@ -24,15 +24,15 @@ public class CombinationSum_39 {
     }
 
     private void dfs(List<List<Integer>> ans, List<Integer> list, int[] candidates, int target, int index) {
-        if (target<0) return;
-        if (target==0) {
+        if (target < 0) return;
+        if (target == 0) {
             ans.add(new ArrayList<>(list));
             return;
         }
-        for (int i=index;i<candidates.length;i++){
+        for (int i = index; i < candidates.length; i++) {
             list.add(candidates[i]);
-            dfs(ans, list, candidates, target-candidates[i], i);
-            list.remove(list.size()-1);
+            dfs(ans, list, candidates, target - candidates[i], i);
+            list.remove(list.size() - 1);
         }
     }
 }
