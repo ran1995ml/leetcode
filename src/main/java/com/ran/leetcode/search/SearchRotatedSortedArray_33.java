@@ -11,8 +11,8 @@ package com.ran.leetcode.search;
 public class SearchRotatedSortedArray_33 {
     public static void main(String[] args) {
         SearchRotatedSortedArray_33 obj = new SearchRotatedSortedArray_33();
-        int[] nums = {4, 5, 6, 7, 8, 1, 2, 3};
-        int target = 8;
+        int[] nums = {3, 1};
+        int target = 1;
         System.out.println(obj.search(nums, target));
     }
 
@@ -25,7 +25,7 @@ public class SearchRotatedSortedArray_33 {
                 return mid;
             }
             if (nums[0] <= nums[mid]) {
-                if (nums[0] <= target && target < nums[mid]) {
+                if (nums[0] <= target && nums[mid] > target) {
                     right = mid - 1;
                 } else {
                     left = mid + 1;
