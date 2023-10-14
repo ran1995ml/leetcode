@@ -1,7 +1,5 @@
 package com.ran.leetcode.dfs;
 
-import java.util.Objects;
-
 /**
  * WordSearch_79
  *
@@ -11,7 +9,7 @@ import java.util.Objects;
 public class WordSearch_79 {
     public static void main(String[] args) {
         WordSearch_79 obj = new WordSearch_79();
-        char[][] board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
+        char[][] board = {{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
         String word = "ABCCED";
         System.out.println(obj.exist(board, word));
     }
@@ -20,9 +18,9 @@ public class WordSearch_79 {
         int row = board.length;
         int col = board[0].length;
         boolean[] visited = new boolean[row * col];
-        for (int i=0;i<row;i++) {
-            for (int j=0;j<col;j++) {
-                if (dfs(board,visited,word,i,j,row,col,0)) {
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                if (dfs(board, visited, word, i, j, row, col, 0)) {
                     return true;
                 }
             }
