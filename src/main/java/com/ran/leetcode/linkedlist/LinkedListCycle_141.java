@@ -2,11 +2,10 @@ package com.ran.leetcode.linkedlist;
 
 import com.ran.leetcode.entity.ListNode;
 
-import java.util.List;
-
 /**
  * LinkedListCycle_141
  * 快慢指针，有环必会相遇
+ *
  * @author rwei
  * @since 2023/10/21 15:56
  */

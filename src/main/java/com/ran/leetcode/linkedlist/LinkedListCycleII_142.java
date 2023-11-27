@@ -2,8 +2,6 @@ package com.ran.leetcode.linkedlist;
 
 import com.ran.leetcode.entity.ListNode;
 
-import java.util.List;
-
 /**
  * LinkedListCycleII_142
  * 环的长度: r, 环内相遇的长度: r1, 环外的长度: l

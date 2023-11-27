@@ -1,9 +1,7 @@
 package com.ran.leetcode.dp;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * WordBreak_139
@@ -22,8 +20,8 @@ public class WordBreak_139 {
     public boolean wordBreak(String s, List<String> wordDict) {
         boolean[] dp = new boolean[s.length() + 1];
         dp[0] = true;
-        for (int i=0;i<s.length();i++) {
-            for (int j=s.length();j>i;j--) {
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = s.length(); j > i; j--) {
                 if (dp[i] && wordDict.contains(s.substring(i, j))) {
                     dp[j] = true;
                 }

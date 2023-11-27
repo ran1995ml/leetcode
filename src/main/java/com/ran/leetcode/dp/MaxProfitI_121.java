@@ -9,7 +9,7 @@ package com.ran.leetcode.dp;
 public class MaxProfitI_121 {
     public static void main(String[] args) {
         MaxProfitI_121 obj = new MaxProfitI_121();
-        int[] prices = {7,1,5,3,6,4};
+        int[] prices = {7, 1, 5, 3, 6, 4};
         System.out.println(obj.maxProfit(prices));
     }
 
